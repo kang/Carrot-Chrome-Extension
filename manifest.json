@@ -1,15 +1,23 @@
 {
-  manifest_version: 1,
+  "manifest_version": 2,
 
-  name: 'Money Extender Chrome Extension',
-  description: 'This extension helps users to save instead of spend',
-  version: '0.1',
+  "name": "Money Extender Chrome Extension",
+  "description": "This extension helps users to save instead of spend",
+  "version": "0.1",
 
-  browser_action: {
-    default_icon: 'icon.png',
-    default_popup: 'popup.html'
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   },
-  permissions: [
-    'activeTab'
-  ]
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "web_accessible_resources": ["overlay.html"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
