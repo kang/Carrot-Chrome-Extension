@@ -11,8 +11,9 @@ function scrapeCartItems() {
   [].forEach.call(checkoutItemElements, function(el) {
     var costText = prepareCostText(el.querySelector('.a-color-price').textContent);
     var productName = el.querySelector('.breakword span').textContent;
+    var quantity = parseFloat(el.querySelector('select.quantity-dropdown-select').value);
 
-    totalCost += parseInt(costText.substr(1));
+    totalCost += (parseFloat(costText.substr(1)) * quantity);
     currencyType = costText.charAt(0);
 
     products.push({
@@ -34,7 +35,6 @@ function saveMoney(event) {
   event.preventDefault();
 
   window.location.href = 'https://www.moneyextender.com/awesome/';
-  $('.me-overlay-container').remove();
 }
 
 function closeOverlay(event) {
