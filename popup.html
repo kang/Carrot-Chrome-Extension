@@ -5,7 +5,7 @@
     <script src="popup.js"></script>
 	<style>
 	
-body {background-color: #27b999;font-family:helvetica, arial, verdana;color: #fff;width:250px;padding:10px; font-size: 15px; line-height:1.3em;}
+body {background-color: #27b999;font-family:helvetica, arial, verdana;color: #fff;width:250px;padding:10px; font-size: 15px; line-height:1.4em;}
 .button {background-color:#f5610b;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
@@ -25,19 +25,25 @@ body {background-color: #27b999;font-family:helvetica, arial, verdana;color: #ff
 	padding:5px;
 	margin-top: 3px;
 }
+
 </style>
   </head>
   <body>
-    <h1 style="font-family:Arial; color:#000;"><img src="https://www.moneyextender.com/wp-content/uploads/favicon.png">CARROT</h1>
-	<p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+    <h1 style="font-family:Arial; color:#000;line-height:1.5em;"><img src="https://www.moneyextender.com/wp-content/uploads/favicon.png">CARROT</h1>
+	<p>Congrats on making the first step towards your goals. Whether it's paying off debt or saving towards a goal or retirement, we're here to help!</p>
+	
+	<p>Name: <input type="text" name="UserName" value="..."></p>
+	<h2>What is your goal?</h2>
+	  <input type="radio" name="Debt" />Pay off debt<br/>
+  <input type="radio" name="Save"/>Save for an occasion or a product<br/>
+    <input type="radio" name="Save"/>Save for retirement<br/>
+	<p>The name of my goal: <input type="text" name="GoalName" value="e.g. new car or wedding"></p>
+	<p>How much does your goal cost? <input type="text" name="GoalCost" value="e.g. 100 dollar"></p>
+  <input type="submit" class="button" value="Start my goals"> 
+  <!--Button submit will save the values in a cookie/browser-->  
   
-	<h2>My goals</h2>
-	  <input type="checkbox" name="format" value="format1"/>Pay off debt<br/>
-  <input type="checkbox" name="format" value="format2"/>Save for retirement<br/>
-  <input type="checkbox" name="format" value="format3"/>Give to charity<br/>
-    <input type="checkbox" name="format" value="format3"/>Save towards my goal<br/>
-	<p>My custom goal: <input type="text" name="Goal" value="e.g. new car"></p>
-  <input type="submit" class="button" value="Save money now">
+  <p>You are currently <span value="GoalPercentage" style="font-size:1.5em;">X</span>% towards achieving your goal.</p>
+  
   <p><a href="https://www.moneyextender.com/" target="_blank"> > to the website</a></p>
   </body>
 </html>

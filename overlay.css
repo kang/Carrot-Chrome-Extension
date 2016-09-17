@@ -4,7 +4,7 @@
   position: absolute;
   z-index: 100000;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .me-overlay { background-position: center; }
@@ -17,7 +17,7 @@
   font-family: helvetica, arial, verdana;
   font-size: 20px;
 }
-.save-button, .continue-button {
+.save-button {
   background-color: #f5610b;
   border-color: #f5610b;
   -moz-border-radius: 28px;
@@ -31,9 +31,24 @@
   padding: 10px 25px;
   text-decoration: none;
   margin-top: 20px;
-
-  color: #ccc;
-  font: 0.8em Arial, Helvetica, sans-serif;
-  padding: 5px;
-  margin-top: 3px;
 }
+
+.continue-button {
+  background-color: rgba(0,0,0,0.3);
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #fff;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.important-text { background-color: #f5610b; }
+
+.me-overlay h1 { display: inline-block; }

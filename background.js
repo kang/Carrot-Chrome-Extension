@@ -16,7 +16,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     inAmazonCheckout: tab.title === AMAZON_CHECKOUT_TITLE
   };
 
-  if (currentPage.inAmazonCart || currentPage.inAmazonCheckout) {
+  if (currentPage.inAmazonCheckout) {
     chrome.tabs.executeScript(tabId, { file: 'jquery-3.1.0.min.js' });
     chrome.tabs.executeScript(tabId, { file: 'overlay.js' });
     chrome.tabs.insertCSS(tabId, { file: 'overlay.css' });
