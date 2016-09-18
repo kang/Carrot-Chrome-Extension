@@ -16,3 +16,9 @@ chrome.storage.sync.get('carrot', function(state) {
     $('#me-settings-goalpercentage')[0].innerText = parseInt(totalProductCost/goalCost*100) + '%';
   }
 });
+
+$('#me-settings-reset').ready(function() {
+  $('#me-settings-reset').click(function() {
+    chrome.storage.sync.remove('carrot');
+  });
+});
