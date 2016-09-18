@@ -22,12 +22,16 @@ function scrapeCartItems() {
     });
   });
 
-  var state = JSON.parse(window.localStorage.carrot);
+  chrome.storage.sync.get('carrot', function(storage) {
+    let carrotState = storage.carrot;
 
-  state.currentProducts = products;
-  state.currentTotalCost = currencyType + totalCost;
+    carrotState.currentProducts = products;
+    carrotState.currentTotalCost = currencyType + totalCost;
 
-  window.localStorage.carrot = JSON.stringify(state);
+    chrome.storage.sync.set({ carrot: carrotState }, function() {
+      console.log('stored scraped items');
+    });
+  });
 }
 
 function saveMoney(event) {
@@ -63,12 +67,15 @@ scrapeCartItems();
 renderOverlay();
 
 $('.me-overlay').ready(function (){
-  let state = JSON.parse(window.localStorage.carrot);
+  chrome.storage.sync.get('carrot', function(storage) {
+    let state = storage.carrot;
 
-  $('#me-total-cost')[0].innerText = state.currentTotalCost;
-  $('#me-goal-percentage')[0].innerText = composeGoalPercentage(state.currentTotalCost, state.goal.cost);
-  $('#me-username')[0].innerText = state.name;
+    $('#me-total-cost')[0].innerText = state.currentTotalCost;
+    $('#me-goal-percentage')[0].innerText = composeGoalPercentage(state.currentTotalCost, state.goal.cost);
+    $('#me-username')[0].innerText = state.name;
+    $('#me-goalname')[0].innerText = state.goal.name;
 
-  $('.save-button').click(saveMoney);
-  $('.continue-button').click(closeOverlay);
+    $('.save-button').click(saveMoney);
+    $('.continue-button').click(closeOverlay);
+  });
 });

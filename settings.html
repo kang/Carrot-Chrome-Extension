@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Carrot</title>
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="settings.js"></script>
+	<style>
+
+body {background-color: #27b999;font-family:helvetica, arial, verdana;color: #fff;width:280px;padding:10px; font-size: 15px; line-height:1.4em;}
+.button {background-color:#f5610b;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #f5610b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:10px 25px;
+	text-decoration:none;
+	margin-top:20px;}
+	input{
+    color:#ccc;
+    font: 0.8em Arial, Helvetica, sans-serif;
+	padding:5px;
+	margin-top: 3px;
+}
+a {color: #fff;}
+
+</style>
+  </head>
+  <body>
+    <h1 style="font-family:Arial; color:#000;line-height:1.5em;"><img src="https://www.carrotapp.co/wp-content/uploads/carrot-logo-final.png"></h1>
+	<p>You're all set to go! We'll be on your side when you need it!</p>
+
+	<p>Hi, <span id="me-settings-name"/>username<span></p>
+	<div style="background-color:#f5610b; padding:20px;">
+	<h3 style="color:#feb991;font-weight:bold;font-size:30px;">MY CARROT</h3>
+	  <h3><span id="me-settings-goalname"/>GoalName<span></h3>
+	   <h3>at the amount of <span id="me-settings-goalcost"/>GoalCost<span><br/></h3>
+
+  <p>You are currently at <span id="me-settings-goalpercentage" value="goalpercentage" style="font-size:1.5em;">0%</span> towards achieving your goal.</p>
+  </div>
+  <p>Keep it going!</p>
+
+
+
+	  <a href="EDIT">edit your goal</a>
+  <p><a href="https://www.carrotapp.co"target="_blank">www.carrotapp.co</a></p>
+  </body>
+</html>

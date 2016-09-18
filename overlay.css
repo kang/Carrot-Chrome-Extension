@@ -1,7 +1,6 @@
 .me-overlay-container {
-  background-color: black;
+  background-color: rgba(5, 145, 115, 0.85);
   height:100%;
-  opacity: 0.8;
   position: fixed;
   width: 100%;
   z-index: 100000;
@@ -10,13 +9,16 @@
 .me-overlay { background-position: center; }
 
 .me-overlay-content {
-  background-color: rgba(0,0,0,0.7);
   color: #fff;
   font-family: helvetica, arial, verdana;
   font-size: 20px;
   height: 100%;
   width: 100%;
 }
+
+.me-overlay h1 { margin-bottom: 20px; }
+.me-overlay h2 { display: inline-block; }
+
 .save-button {
   -moz-border-radius: 28px;
   -webkit-border-radius: 28px;

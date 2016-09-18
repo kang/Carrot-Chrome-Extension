@@ -6,15 +6,15 @@
   "version": "0.1",
 
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "icon.png"
   },
   "permissions": [
     "activeTab",
     "tabs",
     "<all_urls>",
     "https://*/*",
-    "http://*/*"
+    "http://*/*",
+    "storage"
   ],
   "web_accessible_resources": ["overlay.html"],
   "background": {
@@ -24,7 +24,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["popupMessageHandler.js"]
+      "js": ["messageHandler.js"]
     }
   ]
 }
