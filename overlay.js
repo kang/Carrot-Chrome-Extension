@@ -53,6 +53,12 @@ function renderOverlay() {
   }
 }
 
+function composeGoalPercentage(totalCostText, goalCost) {
+  let totalCost = parseFloat(totalCostText.substr(1));
+
+  return parseInt(totalCost/goalCost*100) + '%';
+}
+
 scrapeCartItems();
 renderOverlay();
 
@@ -60,6 +66,8 @@ $('.me-overlay').ready(function (){
   let state = JSON.parse(window.localStorage.carrot);
 
   $('#me-total-cost')[0].innerText = state.currentTotalCost;
+  $('#me-goal-percentage')[0].innerText = composeGoalPercentage(state.currentTotalCost, state.goal.cost);
+  $('#me-username')[0].innerText = state.name;
 
   $('.save-button').click(saveMoney);
   $('.continue-button').click(closeOverlay);
