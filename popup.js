@@ -20,6 +20,8 @@ function saveSettings() {
     };
 
     chrome.storage.sync.set({ carrot: carrot }, function() {
+      chrome.browserAction.setPopup({ popup: 'settings.html' });
+
       window.location.href = 'settings.html';
     });
   });
