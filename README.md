@@ -1,1 +1,1 @@
-This is the codebase for the Money Extender chrome extension
+Carrot is a chrome extension to help you save money
