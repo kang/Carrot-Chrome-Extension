@@ -22,7 +22,6 @@ function scrapeCartItems() {
     });
   });
 
-  window.localStorage.carrot = !!window.localStorage.carrot ? window.localStorage.carrot : '{}';
   var state = JSON.parse(window.localStorage.carrot);
 
   state.currentProducts = products;

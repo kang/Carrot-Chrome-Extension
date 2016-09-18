@@ -2,43 +2,22 @@
 <html>
   <head>
     <title>Carrot</title>
+    <script src="jquery-3.1.0.min.js"></script>
     <script src="popup.js"></script>
-	<style>
-
-body {background-color: #27b999;font-family:helvetica, arial, verdana;color: #fff;width:250px;padding:0 10px; margin: 10px; font-size: 15px; line-height:1.4em;}
-.button {background-color:#f5610b;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #f5610b;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:10px 25px;
-	text-decoration:none;
-	margin-top:20px;}
-	input{
-    color:#ccc;
-    font: 0.8em Arial, Helvetica, sans-serif;
-	padding:5px;
-	margin-top: 3px;
-}
-
-</style>
+    <link rel="stylesheet" href="popup.css"></link>
   </head>
-  <body>
-    <h1 style="font-family:Arial; color:#3A3A3A;line-height:1.5em;"><img src="https://www.moneyextender.com/wp-content/uploads/favicon.png">CARROT</h1>
-	<p>Congratulations on taking the first step towards your goals - or carrots as we like to call them. Whether it's paying off debt or saving towards a goal or retirement, we're here to help!</p>
-
-	<p>Your name: <input type="text" name="UserName" placeholder="Bugs Bunny"></p>
-	<h2>What is your carrot?</h2>
-	<p>What do you want to save for? <input type="text" name="GoalName" placeholder="e.g. new car or wedding"></p>
-	<p>How much do you need to save? <input type="text" name="GoalCost" placeholder="e.g. 100 dollar"></p>
-  <input type="submit" class="button" value="Plant your carrot!">
-  <!--Button submit will save the values in a cookie/browser-->
-
-  <p><a href="https://www.moneyextender.com/" target="_blank"> > to the website</a></p>
+  <body class="me-popup-body">
+    <div class="me-popup">
+      <h1 style="font-family:Arial; color:#3A3A3A;line-height:1.5em;"><img src="https://www.moneyextender.com/wp-content/uploads/favicon.png">CARROT</h1>
+      <p>Congratulations on taking the first step towards your goals - or carrots as we like to call them. Whether it's paying off debt or saving towards a goal or retirement, we're here to help!</p>
+      <p>Your name: <input id="me-name-input" type="text" name="UserName" placeholder="Bugs Bunny"></p>
+      <h2>What is your carrot?</h2>
+      <p>What do you want to save for? <input id="me-goal-name-input" type="text" name="GoalName" placeholder="e.g. new car or wedding"></p>
+      <p>How much do you need to save? <input id="me-goal-cost-input" type="text" name="GoalCost" placeholder="e.g. 100 dollar"></p>
+      <input type="submit" class="button me-plant-carrot-button" value="Plant your carrot!">
+      <!--Button submit will save the values in a cookie/browser-->
+      <p><a href="https://www.moneyextender.com/" target="_blank"> > to the website</a></p>
+    </div>
   </body>
+  <script src="popup.js"></script>
 </html>

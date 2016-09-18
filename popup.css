@@ -1,0 +1,35 @@
+.me-popup-body {
+  background-color: #27b999;
+  color: #fff;
+  font-family:helvetica, arial, verdana;
+  font-size: 15px;
+  line-height:1.4em;
+  margin: 10px;
+  padding:0 10px;
+  width:250px;
+}
+
+.me-plant-carrot-button {
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  background-color:#f5610b;
+  border-radius:28px;
+  border:1px solid #f5610b;
+  color:#ffffff;
+  cursor:pointer;
+  display:inline-block;
+  font-family:Arial;
+  font-size:17px;
+  margin-top:20px;
+  padding:10px 25px;
+  text-decoration:none;
+}
+
+.me-popup input {
+  border: none;
+  color: #3A3A3A;
+  font: 0.9em Arial, Helvetica, sans-serif;
+  margin-top: 3px;
+  padding:5px;
+  width: 94%;
+}
